@@ -1,8 +1,10 @@
 # boomerfeed-quiz
 ## Authors
 [Jeremiah Pratt](https://www.github.com/jeremiahvpratt)
-[Minyoung Na]
-[Daniel Park]
+
+[Minyoung Na](https://www.github.com/flyingonionman)
+
+[Daniel Park](https://www.github.com/dhyunpark)
 ## Description
 The Boomerfeed Quiz is a quiz designed to help your boomer relatives align their political views with real, proven policy positions that help fix those issues. Does your aunt hate abortion? Our quiz will hook her up with a nonprofit working to provide sex education and free birth control (and here's a body of research showing how those things reduce abortions!) Does your grandfather think terrorism is a plague in america? Here's a nonprofit that works to rehabilitate ex members of white supremacy groups (and here's the research that shows how most US terrorism is from right-wing and white supremacist groups). 
 
