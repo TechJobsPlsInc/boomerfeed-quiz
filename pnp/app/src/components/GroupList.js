@@ -65,16 +65,16 @@ class GroupList extends Component {
         <AppNavbar/>
         <Container fluid>
           <div className="float-right">
-            <Button color="success" tag={Link} to="/groups/new">Add Group</Button>
+            <Button color="success" tag={Link} to="/groups/new">Invite New</Button>
           </div>
-          <h3>My JUG Tour</h3>
+          <h3>Hey guys let's troll our relatives</h3>
           <Table className="mt-4">
             <thead>
             <tr>
               <th width="20%">Name</th>
-              <th width="20%">Location</th>
-              <th>Events</th>
-              <th width="10%">Actions</th>
+              <th width="20%">Alignment</th>
+              <th>Clicked Links</th>
+              <th width="10%">Details</th>
             </tr>
             </thead>
             <tbody>
