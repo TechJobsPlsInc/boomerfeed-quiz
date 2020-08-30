@@ -12,4 +12,10 @@ This quiz is absolutely to troll your relatives - some of them probably won't li
 
 ## Development instructions
 
-`java -jar target/pnp-0.0.1-SNAPSHOT.jar` in the root directory
+`mvnw spring-boot:run` in the root directory to start the spring server on 8080
+
+`npm start` in the /app directory to start the react app
+
+`mvn clean install` in the root directory to crate a java snapshot that has the static html file.
+
+`java -jar target/pnp-0.0.1-SNAPSHOT.jar` in the root directory to run the snapshot
