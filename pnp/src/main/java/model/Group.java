@@ -12,22 +12,24 @@ import java.util.Set;
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Entity
-@Table(name = "user_group")
+@Table(name = "sharer")
 public class Group {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="sharer_id")
     private Long id;
+    
     @NonNull
     private String name;
-    private String address;
-    private String city;
-    private String stateOrProvince;
-    private String country;
-    private String postalCode;
+    
     @ManyToOne(cascade=CascadeType.PERSIST)
     private User user;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+    /* 
+    Do not touch unless you know what you are doing
+    
+    */
+    @OneToMany(mappedBy="sharer", fetch = FetchType.EAGER, cascade=CascadeType.ALL)
     private Set<Event> events;
 }

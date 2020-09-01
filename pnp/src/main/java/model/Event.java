@@ -5,10 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.time.Instant;
 import java.util.Set;
 
@@ -17,14 +14,14 @@ import java.util.Set;
 @AllArgsConstructor
 @Builder
 @Entity
+@Table(name = "events")
 public class Event {
 
     @Id
     @GeneratedValue
     private Long id;
-    private Instant date;
-    private String title;
-    private String description;
-    @ManyToMany
-    private Set<User> attendees;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn (name="sharer_id")
+    private Group sharer;
 }
