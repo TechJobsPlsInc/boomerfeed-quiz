@@ -1,4 +1,4 @@
-package com.cooper.pnp.model;
+package com.cooper.pnp;
 
 import com.cooper.pnp.model.Event;
 import com.cooper.pnp.model.Group;
