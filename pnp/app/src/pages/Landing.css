@@ -1,0 +1,39 @@
+.Landing{
+    font-family: 'Helvetica Neue', sans-serif;
+    display:flex;
+    height:100vh;
+    width:100vw;
+}
+
+.Landing .Landing_left{
+    display:flex;
+    align-items: center;
+    flex: 1 1;
+    justify-content: center;
+    align-content: center;
+}
+
+.Landing .Landing_left .Landing_title{
+    border-bottom: solid 2px;
+    margin-bottom: 4vh;
+
+}
+
+.Landing .Landing_left .Landing_title h1{
+    margin-bottom: 4vh;
+    font-size: 2.7vw;
+}
+
+.Landing .Landing_right{
+    flex:1;
+    background-color:#9DF7E5;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.Landing .Landing_right .Landing_form h1{
+    font-size: 2.7vw;
+
+}
