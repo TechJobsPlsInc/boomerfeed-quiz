@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 /* import { Link } from 'react-router-dom';
 import { Button, Container } from 'reactstrap'; */
 import AppNavbar from '../components/AppNavbar';
@@ -11,6 +11,25 @@ import './Landing.css';
  * @todo add functionality
  */
 function Landing() {
+    const [email, setEmail] = useState('')
+
+    const submit = (evt) => {
+        evt.preventDefault();
+        document.querySelector('.input_button').classList.remove('inputComplete')
+
+        fetch('api/email')
+            .then(response => response.json())
+    }
+
+    const isInputComplete = (string) =>{
+        let re = /\.com/g
+        if (string.match(re)){
+            document.querySelector('.input_button').classList.add('inputComplete')
+        } else {
+            document.querySelector('.input_button').classList.remove('inputComplete')
+
+        }
+    }
     return (
         <>
             <AppNavbar/>
@@ -28,11 +47,22 @@ function Landing() {
 
                 <div className="Landing_right"> 
                     <div className="Landing_form">
-                        <h2>Step 1. Enter your email</h2>
+                        <h3>Step 1. Enter your email</h3>
+                        <form onSubmit={submit}>
+                            <input 
+                                className="input_email" 
+                                type="text" 
+                                name="email" 
+                                value={email}
+                                onChange={e=> {
+                                    setEmail(e.target.value)
+                                    isInputComplete(e.target.value)
+                                }}
+                                placeholder="email" />
+                            <input className="input_button" type="submit" value="next" />
+                        </form>
                     </div>
-                
                 </div>
-
             </div>
 
         </>
