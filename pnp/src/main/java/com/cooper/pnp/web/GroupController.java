@@ -1,5 +1,6 @@
 package com.cooper.pnp.web;
 
+import com.cooper.pnp.exception.ResourceNotFoundException;
 import com.cooper.pnp.model.Group;
 import com.cooper.pnp.model.GroupRepository;
 import org.slf4j.Logger;
