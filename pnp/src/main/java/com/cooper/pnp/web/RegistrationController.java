@@ -36,7 +36,7 @@ public class RegistrationController {
 		 * Creating a User with the help of User class that we have declared and setting
 		 * Email address of the sender.
 		 */
-		user.setEmailAddress("cty.transformer@gmail.com");  //Receiver's email address
+		user.setEmailAddress("minyoungwork1997@gmail.com");  //Receiver's email address
 		/*
 		 * Here we will call sendEmail() for Sending mail to the sender.
 		 */
@@ -71,6 +71,6 @@ public class RegistrationController {
 		} catch (MailException mailException) {
 			System.out.println(mailException);
 		}
-		return "Congratulations! Your mail has been send to the user.";
+		return "Congratulations! maybe";
 	}
 }

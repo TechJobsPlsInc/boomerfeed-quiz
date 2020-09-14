@@ -54,9 +54,9 @@ public class MailService {
 
         SimpleMailMessage mail = new SimpleMailMessage();
         mail.setFrom("minyoungna1997@gmail.com");
-		mail.setTo(user.getEmailAddress());
+		mail.setTo("cty.transformer@gmail.com");
 		mail.setSubject("Testing Mail API");
-		mail.setText("Hurray ! You have done that dude...");
+		mail.setText("Test: 1 ");
 
 		/*
 		 * This send() contains an Object of SimpleMailMessage as an Parameter
@@ -76,7 +76,7 @@ public class MailService {
 		MimeMessage mimeMessage = javaMailSender.createMimeMessage();
 		
 		MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
-
+        helper.setFrom("minyoungna1997@gmail.com");
 		helper.setTo(user.getEmailAddress());
 		helper.setSubject("Testing Mail API with Attachment");
 		helper.setText("Please find the attached document below.");
