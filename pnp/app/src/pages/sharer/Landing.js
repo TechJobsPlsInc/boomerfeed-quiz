@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 /* import { Link } from 'react-router-dom';
 import { Button, Container } from 'reactstrap'; */
-import AppNavbar from '../components/AppNavbar';
+import AppNavbar from '../../components/AppNavbar';
 import './Landing.css';
 
 /**
