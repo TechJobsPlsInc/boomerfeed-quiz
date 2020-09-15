@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import { Button, Container } from 'reactstrap'; */
 import AppNavbar from '../../components/AppNavbar';
 import './Landing.css';
+import { useHistory } from "react-router";
 
 /**
  * Landing Page for sharers
@@ -12,13 +13,24 @@ import './Landing.css';
  */
 function Landing() {
     const [email, setEmail] = useState('')
+    const history = useHistory();
 
-    const submit = (evt) => {
+    const submit = async (evt) => {
+        
         evt.preventDefault();
         document.querySelector('.input_button').classList.remove('inputComplete')
 
-        fetch('api/email')
-            .then(response => response.json())
+        /* await fetch('/send-mail', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(email),
+          }); */
+          history.push({
+            pathname:  "/dashboard"
+         })
     }
 
     const isInputComplete = (string) =>{
